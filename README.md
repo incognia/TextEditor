@@ -339,6 +339,7 @@ TextEditor/
 
 - Código de conducta
 - Flujo de trabajo de desarrollo
+- [Estrategia de ramas](/.warp/rules/BRANCHING.md) (dev → qa → rc → main)
 - Proceso de *pull request*
 - Estándares de codificación para cada plataforma
 - Contribuciones de traducción
