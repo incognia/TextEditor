@@ -2,9 +2,12 @@
 
 ## [2025-10-16]
 
+- docs: update README.md with additional content
+- Merge branch 'main' of github.com:incognia/TextEditor
+- docs: update README.md
+- test: add ianpa.test file
 - config: configurar Git con llave SSH ed25519 y credenciales de Carlos Galindo
 - test: agregar archivo de prueba caz.test
-- docs: actualizar README.md
 
 ## [2025-10-14]
 
