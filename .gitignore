@@ -1,0 +1,515 @@
+# TextEditor - .gitignore
+# Editor de texto multiplataforma: C++, C#, Swift, Qt6, GTK4
+
+# ==============================================================================
+# ARCHIVOS DE SISTEMA Y EDITORES
+# ==============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.old
+*.orig
+
+# ==============================================================================
+# C++ CORE (MULTIPLATAFORMA)
+# ==============================================================================
+
+# Archivos compilados C++
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+build/
+build-*/
+
+# Make
+*.make
+*.mk
+
+# Autotools
+.deps/
+.libs/
+Makefile.in
+aclocal.m4
+compile
+config.guess
+config.h
+config.h.in
+config.log
+config.status
+config.sub
+configure
+depcomp
+install-sh
+libtool
+ltmain.sh
+missing
+stamp-h1
+
+# pkg-config
+*.pc
+
+# Conan
+conanfile.txt.user
+conaninfo.txt
+conanbuildinfo.*
+conan.lock
+
+# vcpkg
+vcpkg_installed/
+.vcpkg-root
+
+# ==============================================================================
+# WINDOWS - C#/.NET
+# ==============================================================================
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vs/
+
+# MSBuild
+*.binlog
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# TeamCity
+_TeamCity*
+
+# DotCover
+*.dotCover
+
+# AxoCover
+.axoCover/*
+!.axoCover/settings.json
+
+# Coverlet
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+
+# Microsoft Azure Web App publish settings
+PublishScripts/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+
+# ==============================================================================
+# macOS - SWIFT/XCODE
+# ==============================================================================
+
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+# ==============================================================================
+# LINUX - QT6
+# ==============================================================================
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.autosave
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.qtcreator
+*.qtcreator.user*
+*.qdocconf
+
+# ==============================================================================
+# LINUX - GTK4/GNOME
+# ==============================================================================
+
+# Autotools
+Makefile.in
+aclocal.m4
+compile
+config.h
+config.h.in
+config.log
+config.status
+configure
+depcomp
+install-sh
+missing
+stamp-h1
+
+# GtkBuilder/Glade temporary files
+*.glade~
+*.ui~
+
+# ==============================================================================
+# HERRAMIENTAS DE DESARROLLO
+# ==============================================================================
+
+# Git
+*.patch
+
+# Tags
+tags
+TAGS
+.tags
+.tags1
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Python (for scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# ==============================================================================
+# DISTRIBUCIÓN Y PAQUETES
+# ==============================================================================
+
+# Windows installers
+*.msi
+*.msix
+*.exe
+
+# macOS bundles
+*.app
+*.dmg
+*.pkg
+*.mpkg
+
+# Linux packages
+*.deb
+*.rpm
+*.tar.gz
+*.tar.xz
+*.AppImage
+
+# Flatpak
+*.flatpak
+.flatpak-builder/
+
+# Snap
+*.snap
+parts/
+prime/
+stage/
+
+# ==============================================================================
+# ARCHIVOS TEMPORALES Y CACHE
+# ==============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Backup files
+*~
+*.bak
+*.backup
+*.old
+*.orig
+
+# ==============================================================================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO
+# ==============================================================================
+
+# Configuraciones locales
+config.local.*
+settings.local.*
+.env.local
+
+# Archivos de prueba temporales
+test_output/
+*.test_result
+test_files/
+
+# Documentación generada
+docs/build/
+docs/_build/
+docs/html/
+docs/latex/
+
+# ==============================================================================
+# CI/CD Y DESARROLLO
+# ==============================================================================
+
+# Coverage reports
+coverage/
+*.coverage
+lcov.info
+coverage.xml
+
+# Profiling
+*.prof
+gmon.out
+callgrind.out.*
+perf.data*
+
+# Valgrind
+*.memcheck
+*.helgrind
+*.cachegrind
+*.massif
+
+# Static analysis
+cppcheck-build-dir/
+scan-build-*/
+
+# Benchmarking
+benchmark_results/
+
+# Security scanning
+.snyk

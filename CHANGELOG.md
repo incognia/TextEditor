@@ -1,5 +1,9 @@
 # Changelog
 
+## [2025-10-16]
+
+- config: agregar .gitignore completo para arquitectura multiplataforma (C++, C#, Swift, Qt6, GTK4)
+
 ## [2025-10-15]
 
 - docs: agregar estrategia híbrida de CI/CD con GitHub Actions y Argo CD (fases de desarrollo local, CI básico y CI completo)
