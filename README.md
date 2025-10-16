@@ -1,5 +1,10 @@
 # TextEditor
 
+[![Licencia: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://github.com/incognia/TextEditor/blob/main/LICENSE)
+[![Lenguaje: C%2B%2B%2C%20C%23%2C%20Swift](https://img.shields.io/badge/Languages-C%2B%2B%20%7C%20C%23%20%7C%20Swift-brightgreen)](https://github.com/incognia/TextEditor)
+[![Plataformas: Windows%2C%20macOS%2C%20Linux](https://img.shields.io/badge/Platforms-Windows%20%7C%20macOS%20%7C%20Linux-blue)](https://github.com/incognia/TextEditor)
+[![Estado: En desarrollo](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)](https://github.com/incognia/TextEditor)
+
 Editor de texto simple, rápido y ligero multiplataforma construido con tecnologías nativas para un rendimiento óptimo y experiencia de usuario en cada sistema operativo.
 
 ## Descripción general

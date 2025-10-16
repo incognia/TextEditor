@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: añadir badges de licencia, lenguajes y plataformas al README.md
 - test: eliminar archivos de prueba test (caz.test, ianpa.test, incognia.test)
 - docs: crear CODE_OF_CONDUCT.md con filosofía del proyecto
 - docs: aplicar reglas LINGUISTICS.md a CODE_OF_CONDUCT.md
