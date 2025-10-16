@@ -11,6 +11,40 @@ Editor de texto simple, rápido y ligero multiplataforma construido con tecnolog
 
 TextEditor está diseñado para proporcionar una experiencia de edición consistente en todas las principales plataformas de escritorio, aprovechando marcos de trabajo y lenguajes nativos para obtener el mejor rendimiento e integración con cada sistema operativo.
 
+## Arquitectura
+
+TextEditor utiliza una arquitectura híbrida que maximiza el rendimiento y la experiencia nativa:
+
+```
+Core C++ compartido (multiplataforma)
+↓
+┌─────────────────┬──────────────────┬──────────────────┐
+│   Windows       │     macOS        │     Linux        │
+│   C# bridge     │   Swift bridge   │   Directo C++    │
+│   WPF/WinUI     │   SwiftUI/AppKit │   Qt6/GTK4       │
+└─────────────────┴──────────────────┴──────────────────┘
+```
+
+### Componente común (C++)
+
+- **Buffer y edición**: gestión de texto, inserción, eliminación
+- **Búsqueda y reemplazo**: lógica de búsqueda con expresiones regulares
+- **Undo/Redo**: historial de cambios
+- **Parsers y lexers**: análisis sintáctico y tokenización
+- **Gestión de archivos**: lectura, escritura, codificación
+
+### Capas nativas por plataforma
+
+- **Windows**: Interfaz C# con bridges C++/CLI al core C++
+- **macOS**: Interfaz Swift/Objective-C++ con interoperabilidad C++
+- **Linux**: Interfaz Qt6/GTK4 directamente con el core C++
+
+Esta arquitectura permite:
+- ✅ GUI 100% nativa en cada plataforma
+- ✅ Un único core de edición mantenido
+- ✅ Cero duplicación de lógica de negocio
+- ✅ Máximo rendimiento en cada sistema operativo
+
 ### Implementaciones específicas por plataforma
 
 - **Windows**: C# con WPF/WinUI para experiencia nativa de Windows
@@ -176,28 +210,61 @@ TextEditor/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
 ├── docs/
 │   ├── user-guide/
 │   ├── developer-guide/
 │   └── api-reference/
-├── src/
-│   ├── windows/           # Implementación C# WPF/WinUI
+├── core/                # ✅ COMPONENTE COMÚN (C++ multiplataforma)
+│   ├── CMakeLists.txt
+│   ├── include/
+│   │   ├── editor/
+│   │   │   ├── Buffer.h
+│   │   │   ├── Editor.h
+│   │   │   ├── UndoRedo.h
+│   │   │   └── Selection.h
+│   │   ├── parser/
+│   │   │   ├── Lexer.h
+│   │   │   ├── Parser.h
+│   │   │   └── SyntaxTree.h
+│   │   ├── search/
+│   │   │   ├── FindReplace.h
+│   │   │   └── Regex.h
+│   │   └── file/
+│   │       ├── FileManager.h
+│   │       └── Encoding.h
+│   └── src/
+│       ├── editor/
+│       ├── parser/
+│       ├── search/
+│       └── file/
+├── platform/
+│   ├── windows/           # Capa nativa: C# WPF/WinUI
+│   │   ├── CMakeLists.txt
 │   │   ├── TextEditor.sln
-│   │   ├── TextEditor/
-│   │   ├── TextEditor.Core/
-│   │   └── TextEditor.Tests/
-│   ├── macos/            # Implementación Swift SwiftUI/AppKit
+│   │   ├── UI/
+│   │   │   ├── MainWindow.xaml
+│   │   │   └── EditorControl.xaml
+│   │   └── Interop/
+│   │       ├── CoreBridge.h
+│   │       └── CoreBridge.cpp
+│   ├── macos/            # Capa nativa: Swift SwiftUI/AppKit
+│   │   ├── CMakeLists.txt
 │   │   ├── TextEditor.xcodeproj
-│   │   ├── TextEditor/
-│   │   ├── TextEditorCore/
-│   │   └── TextEditorTests/
-│   └── linux/            # Implementaciones C++
-│       ├── gtk/          # GTK4 para GNOME
+│   │   ├── Swift/
+│   │   │   ├── ContentView.swift
+│   │   │   └── EditorView.swift
+│   │   └── Interop/
+│   │       ├── CoreBridge.h
+│   │       └── CoreBridge.mm
+│   └── linux/            # Capa nativa: Qt6/GTK4
+│       ├── CMakeLists.txt
+│       ├── gtk/
 │       │   ├── CMakeLists.txt
 │       │   ├── src/
 │       │   ├── include/
 │       │   └── tests/
-│       └── qt/           # Qt6 para KDE Plasma
+│       └── qt/
 │           ├── CMakeLists.txt
 │           ├── src/
 │           ├── include/
