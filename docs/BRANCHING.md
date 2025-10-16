@@ -366,6 +366,63 @@ test(parser): add lexer edge cases
 
 Esto garantiza que cada *GUI* se prueba en su entorno nativo.
 
+## Descarga selectiva por plataforma
+
+En entornos de *QA*, **no clonar el repositorio completo**. Descargar solo el *core* + la *GUI* nativa:
+
+### macOS (SwiftUI)
+
+```bash
+# Clonar repositorio vacío
+git clone --no-checkout git@github.com:incognia/TextEditor.git
+cd TextEditor
+
+# Descargar solo core + GUI macOS
+git sparse-checkout init --cone
+git sparse-checkout set core platform/macos
+git checkout gui/swiftui/qa
+```
+
+### Windows (WinUI)
+
+```bash
+git clone --no-checkout git@github.com:incognia/TextEditor.git
+cd TextEditor
+
+git sparse-checkout init --cone
+git sparse-checkout set core platform/windows
+git checkout gui/winui/qa
+```
+
+### Linux KDE (Qt6)
+
+```bash
+git clone --no-checkout git@github.com:incognia/TextEditor.git
+cd TextEditor
+
+git sparse-checkout init --cone
+git sparse-checkout set core platform/linux/qt
+git checkout gui/qt6/qa
+```
+
+### Linux GNOME (GTK4)
+
+```bash
+git clone --no-checkout git@github.com:incognia/TextEditor.git
+cd TextEditor
+
+git sparse-checkout init --cone
+git sparse-checkout set core platform/linux/gtk
+git checkout gui/gtk4/qa
+```
+
+### Ventajas
+
+- ✅ Descarga ~70% menos código innecesario
+- ✅ *Build* y pruebas más rápidas
+- ✅ Menos espacio en disco en máquinas de *QA*
+- ✅ Compilación nativa solo del *core* + *GUI* correspondiente
+
 ## Sincronización de core
 
 El ***core*** *C++* es compartido. Si hay cambios:
