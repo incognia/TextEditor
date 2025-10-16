@@ -15,14 +15,26 @@ TextEditor está diseñado para proporcionar una experiencia de edición consist
 
 TextEditor utiliza una arquitectura híbrida que maximiza el rendimiento y la experiencia nativa:
 
-```
-Core C++ compartido (multiplataforma)
-↓
-┌─────────────────┬──────────────────┬──────────────────┐
-│   Windows       │     macOS        │     Linux        │
-│   C# bridge     │   Swift bridge   │   Directo C++    │
-│   WPF/WinUI     │   SwiftUI/AppKit │   Qt6/GTK4       │
-└─────────────────┴──────────────────┴──────────────────┘
+```mermaid
+graph TB
+    Core["Core C++<br/>(Multiplataforma)<br/><br/>• Buffer & Edit<br/>• Search/Replace<br/>• Undo/Redo<br/>• Parser/Lexer<br/>• File Manager"]
+    
+    Windows["Windows<br/>C# Bridge<br/>WPF/WinUI"]
+    macOS["macOS<br/>Swift Bridge<br/>SwiftUI/AppKit"]
+    Linux["Linux<br/>C++ Direct<br/>Qt6/GTK4"]
+    
+    Core --> Windows
+    Core --> macOS
+    Core --> Linux
+    
+    Windows --> WinApp["Native Windows<br/>Application"]
+    macOS --> MacApp["Native macOS<br/>Application"]
+    Linux --> LinuxApp["Native Linux<br/>Application"]
+    
+    style Core fill:#4CAF50,stroke:#2E7D32,color:#fff
+    style Windows fill:#0078D4,stroke:#003A70,color:#fff
+    style macOS fill:#555,stroke:#000,color:#fff
+    style Linux fill:#FCC624,stroke:#333,color:#000
 ```
 
 ### Componente común (C++)
