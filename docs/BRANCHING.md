@@ -148,12 +148,12 @@ main (producción)
 
 ### Rama `dev` (Desarrollo)
 
-**Propósito**: Integración continua de features en desarrollo desde todas las plataformas.
+**Propósito**: integración continua de *features* en desarrollo desde todas las plataformas.
 
 **Protecciones**:
-- Requiere Pull Request con review
-- CI/CD debe pasar (linting, tests básicos)
-- Rama base para feature branches
+- Requiere *pull request* con review
+- *CI/CD* debe pasar (*linting*, tests básicos)
+- Rama base para ramas de *features*
 
 **Subramas por componente**:
 - `core/dev` - Core C++ compartido
@@ -164,12 +164,12 @@ main (producción)
 
 ### Rama `qa` (Aseguramiento de calidad)
 
-**Propósito**: Pruebas exhaustivas en OS específicos antes de release.
+**Propósito**: pruebas exhaustivas en sistemas operativos específicos antes del *release*.
 
 **Flujo**:
-- Se crea desde `dev` cuando se decide hacer un release
+- Se crea desde `dev` cuando se decide hacer un *release*
 - Cada subbrama se prueba en su OS objetivo
-- Solo bugs críticos se arreglan aquí (no features nuevas)
+- Solo bugs críticos se arreglan aquí (no *features* nuevos)
 
 **Responsabilidades por plataforma**:
 - `gui/winui/qa` - Tester en **Windows**
@@ -177,20 +177,20 @@ main (producción)
 - `gui/qt6/qa` - Tester en **Linux KDE**
 - `gui/gtk4/qa` - Tester en **Linux GNOME**
 
-### Rama `rc` (Release Candidate)
+### Rama `rc` (Candidato a release)
 
-**Propósito**: Código aprobado en QA, listo para producción.
+**Propósito**: código aprobado en *QA*, listo para producción.
 
 **Características**:
-- Solo bugs críticos pueden mergearse
+- Solo bugs críticos pueden *mergearse*
 - Se generan binarios oficiales desde estas ramas
-- Tags como `v1.0-core`, `v1.0-winui`, etc.
+- *Tags* como `v1.0-core`, `v1.0-winui`, etcétera
 
 ### Rama `main` (Producción)
 
 **Protecciones**:
 - Solo se acepta desde `rc`
-- Requiere tag de versión
+- Requiere *tag* de versión
 - Historial limpio y lineal
 
 **Tags de versión**:
@@ -205,7 +205,7 @@ v1.0-gtk4      - GTK4 solamente
 
 ## Flujo de trabajo por plataforma
 
-### Ejemplo: Release v1.0
+### Ejemplo: release v1.0
 
 #### 1. Preparación (desde `main`)
 
@@ -265,7 +265,9 @@ git merge gui/gtk4/qa
 
 #### 3. Release (merge a `main`)
 
-Cuando todas las plataformas aprueban:
+**Cuando todas las plataformas aprueban:**
+
+Al completar *QA*, procede el *merge* a `main` con los *tags* correspondientes:
 
 ```bash
 # Merge de core
@@ -293,15 +295,15 @@ git push origin main --tags
 
 #### 4. GitHub Release
 
-Crear release `v1.0` en GitHub con binarios compilados:
+Crear *release* `v1.0` en GitHub con binarios compilados:
 - `texteditor-1.0-windows.msix`
 - `TextEditor-1.0.dmg`
 - `texteditor-1.0-qt6-x86_64.AppImage`
 - `texteditor-1.0-gtk4-x86_64.AppImage`
 
-## Gestión de features
+## Gestión de ramas de features
 
-### Feature branches
+### Ramas de features
 
 ```bash
 # Crear desde dev
@@ -312,19 +314,19 @@ git add .
 git commit -m "feat(scope): descripción"
 git push origin feature/nombre-feature
 
-# Pull Request a dev (requiere review)
+# Pull request a dev (requiere review)
 # Merge automático después de aprobación
 ```
 
-### Hotfixes en producción
+### Correcciones urgentes en producción
 
-Si hay un bug crítico en `main`:
+Si hay un *bug* crítico en `main`:
 
 ```bash
-# Hotfix desde main
-git checkout -b hotfix/nombre-critico main
+# Corrección urgente desde *main*
+*git* checkout -b hotfix/nombre-critico *main*
 
-# Fix → commit → PR a main y dev
+# Corrección → *commit* → *pull request* a *main* y `dev`
 git checkout main
 git merge hotfix/nombre-critico
 git tag v1.0.1
@@ -336,7 +338,7 @@ git merge hotfix/nombre-critico
 
 ## Protecciones de ramas
 
-| Rama | PR requerido | Review requerido | CI/CD | Merge automático |
+| Rama | *Pull request* requerido | Review requerido | CI/CD | Merge automático |
 |------|-------------|------------------|-------|-----------------|
 | `main` | ✅ | ✅ | ✅ | ❌ |
 | `rc` | ✅ | ✅ | ✅ | ❌ |
@@ -346,7 +348,7 @@ git merge hotfix/nombre-critico
 
 ## Nombres de commits
 
-Usar **Conventional Commits** en inglés:
+Usar ***Conventional Commits*** en inglés:
 
 ```
 feat(gui/winui): add dark mode toggle
@@ -355,24 +357,24 @@ docs: update branching strategy
 test(parser): add lexer edge cases
 ```
 
-## Regla: Un tester por OS
+## Regla: un tester por OS
 
 - **Windows**: Tester en máquina Windows compila y prueba `gui/winui/qa`
 - **macOS**: Tester en macOS compila y prueba `gui/swiftui/qa`
 - **Linux KDE**: Tester en Linux KDE compila y prueba `gui/qt6/qa`
 - **Linux GNOME**: Tester en Linux GNOME compila y prueba `gui/gtk4/qa`
 
-Esto garantiza que cada GUI se prueba en su ambiente nativo.
+Esto garantiza que cada *GUI* se prueba en su entorno nativo.
 
 ## Sincronización de core
 
-El **core C++** es compartido. Si hay cambios:
+El ***core*** *C++* es compartido. Si hay cambios:
 
 1. **Cambio en `core/dev`**
-2. Todos los GUI developers pullan la versión nueva
-3. Recompilan y prueban sus GUIs
+2. Todos los desarrolladores de *GUI* descargan (*pull*) la versión nueva
+3. Recompilan y prueban sus *GUIs*
 4. Resuelven conflictos si es necesario
-5. Pushen a sus ramas respectivas
+5. Envían (*push*) a sus ramas respectivas
 
 ## Referencias
 
