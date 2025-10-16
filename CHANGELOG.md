@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- test: eliminar archivos de prueba test (caz.test, ianpa.test, incognia.test)
 - docs: crear CODE_OF_CONDUCT.md con filosofía del proyecto
 - docs: aplicar reglas LINGUISTICS.md a CODE_OF_CONDUCT.md
 - docs: aplicar reglas LINGUISTICS.md a WARP.md y .warp/README.md (capitalización de títulos y siglas invariables)
