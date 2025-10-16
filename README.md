@@ -1,120 +1,134 @@
 # TextEditor
 
-A simple, fast, and lightweight multiplatform text and Markdown editor built with native technologies for optimal performance and user experience on each operating system.
+Editor de texto simple, rápido y ligero multiplataforma construido con tecnologías nativas para un rendimiento óptimo y experiencia de usuario en cada sistema operativo.
 
-## Overview
+## Descripción general
 
-TextEditor is designed to provide a consistent editing experience across all major desktop platforms while leveraging native frameworks and languages for the best performance and integration with each operating system.
+TextEditor está diseñado para proporcionar una experiencia de edición consistente en todas las principales plataformas de escritorio, aprovechando marcos de trabajo y lenguajes nativos para obtener el mejor rendimiento e integración con cada sistema operativo.
 
-### Platform-Specific Implementations
+### Implementaciones específicas por plataforma
 
-- **Windows**: C# with WPF/WinUI for native Windows experience
-- **macOS**: Swift with SwiftUI/AppKit for seamless macOS integration  
-- **Linux (GNOME)**: C++ with GTK4 for modern GNOME desktop integration
-- **Linux (KDE Plasma)**: C++ with Qt6 for native Plasma experience
+- **Windows**: C# con WPF/WinUI para experiencia nativa de Windows
+- **macOS**: Swift con SwiftUI/AppKit para integración perfecta con macOS  
+- **Linux (GNOME)**: C++ con GTK4 para integración moderna con escritorio GNOME
+- **Linux (KDE Plasma)**: C++ con Qt6 para experiencia nativa con Plasma
 
-## Features
+## Características
 
-### Core Functionality
-- [x] Plain text editing with syntax highlighting
-- [x] Markdown editing with live preview
-- [x] Multiple tabs support
-- [x] Find and replace functionality
-- [x] Auto-save and session restoration
-- [x] Customizable themes (dark/light mode)
+### Funcionalidad principal
 
-### Markdown Support
-- [x] CommonMark specification compliance
-- [x] GitHub Flavored Markdown (GFM) extensions
-- [x] Live preview with synchronized scrolling
-- [x] Table editing support
-- [x] Mermaid diagrams rendering
-- [x] Math expressions (LaTeX/KaTeX)
+- [x] Edición de texto plano con resaltado de sintaxis
+- [x] Edición de Markdown con vista previa en vivo
+- [x] Soporte de múltiples pestañas
+- [x] Búsqueda y reemplazo
+- [x] Guardado automático y restauración de sesión
+- [x] Temas personalizables (modo oscuro/claro)
 
-### Internationalization
-- [x] English (en)
-- [x] Spanish (es)
-- [x] French (fr)
-- [x] German (de)
-- [ ] More languages (contributions welcome)
+### Soporte de Markdown
 
-## Installation
+- [x] Cumplimiento de especificación CommonMark
+- [x] Extensiones GitHub Flavored Markdown (GFM)
+- [x] Vista previa en vivo con desplazamiento sincronizado
+- [x] Soporte para edición de tablas
+- [x] Renderizado de diagramas Mermaid
+- [x] Expresiones matemáticas (LaTeX/KaTeX)
+
+### Internacionalización
+
+- [x] Inglés (en)
+- [x] Español (es)
+- [x] Francés (fr)
+- [x] Alemán (de)
+- [ ] Más idiomas (¡contribuciones bienvenidas!)
+
+## Instalación
 
 ### Windows
+
 ```powershell
-# Download from Microsoft Store (recommended)
+# Descargar desde Microsoft Store (recomendado)
 winget install TextEditor
 
-# Or download .msix installer from releases
+# O descargar instalador .msix desde releases
 # https://github.com/yourusername/TextEditor/releases
 ```
 
 ### macOS
+
 ```bash
-# Download from Mac App Store (recommended)
-# Or install via Homebrew
+# Descargar desde Mac App Store (recomendado)
+# O instalar vía Homebrew
 brew install --cask texteditor
 
-# Or download .dmg from releases
+# O descargar .dmg desde releases
 # https://github.com/yourusername/TextEditor/releases
 ```
 
 ### Linux
 
 #### Ubuntu/Debian
+
 ```bash
-# Download .deb package from releases
+# Descargar paquete .deb desde releases
 sudo dpkg -i texteditor_1.0.0_amd64.deb
-sudo apt-get install -f  # Fix dependencies if needed
+sudo apt-get install -f  # Arreglar dependencias si es necesario
 ```
 
 #### Fedora/RHEL
+
 ```bash
-# Download .rpm package from releases
+# Descargar paquete .rpm desde releases
 sudo dnf install texteditor-1.0.0-1.x86_64.rpm
 ```
 
 #### Arch Linux
+
 ```bash
-# Install from AUR
+# Instalar desde AUR
 yay -S texteditor-git
 ```
 
 #### Flatpak (Universal)
+
 ```bash
 flatpak install flathub io.github.yourusername.TextEditor
 ```
 
-#### AppImage (Portable)
+#### AppImage (Portátil)
+
 ```bash
-# Download AppImage from releases
+# Descargar AppImage desde releases
 chmod +x TextEditor-1.0.0-x86_64.AppImage
 ./TextEditor-1.0.0-x86_64.AppImage
 ```
 
-## Development
+## Desarrollo
 
-### Prerequisites
+### Requisitos previos
 
-#### Windows Development
+#### Desarrollo en Windows
+
 - Visual Studio 2022 (17.8+)
 - .NET 8.0 SDK
 - Windows 11 SDK
 
-#### macOS Development
+#### Desarrollo en macOS
+
 - Xcode 15.0+
 - Swift 5.9+
 - macOS 14.0+ SDK
 
-#### Linux Development
-- GCC 11+ or Clang 15+
-- CMake 3.25+
-- GTK4 development libraries (for GNOME)
-- Qt6 development libraries (for KDE Plasma)
+#### Desarrollo en Linux
 
-### Building from Source
+- GCC 11+ o Clang 15+
+- CMake 3.25+
+- Bibliotecas de desarrollo GTK4 (para GNOME)
+- Bibliotecas de desarrollo Qt6 (para KDE Plasma)
+
+### Compilar desde el código fuente
 
 #### Windows
+
 ```powershell
 git clone https://github.com/yourusername/TextEditor.git
 cd TextEditor/src/windows
@@ -123,6 +137,7 @@ dotnet build --configuration Release
 ```
 
 #### macOS
+
 ```bash
 git clone https://github.com/yourusername/TextEditor.git
 cd TextEditor/src/macos
@@ -130,6 +145,7 @@ xcodebuild -scheme TextEditor -configuration Release
 ```
 
 #### Linux (GTK4/GNOME)
+
 ```bash
 git clone https://github.com/yourusername/TextEditor.git
 cd TextEditor/src/linux/gtk
@@ -139,6 +155,7 @@ make -j$(nproc)
 ```
 
 #### Linux (Qt6/KDE)
+
 ```bash
 git clone https://github.com/yourusername/TextEditor.git
 cd TextEditor/src/linux/qt
@@ -147,7 +164,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 ```
 
-## Project Structure
+## Estructura del proyecto
 
 ```
 TextEditor/
@@ -159,54 +176,55 @@ TextEditor/
 │   ├── developer-guide/
 │   └── api-reference/
 ├── src/
-│   ├── windows/           # C# WPF/WinUI implementation
+│   ├── windows/           # Implementación C# WPF/WinUI
 │   │   ├── TextEditor.sln
 │   │   ├── TextEditor/
 │   │   ├── TextEditor.Core/
 │   │   └── TextEditor.Tests/
-│   ├── macos/            # Swift SwiftUI/AppKit implementation
+│   ├── macos/            # Implementación Swift SwiftUI/AppKit
 │   │   ├── TextEditor.xcodeproj
 │   │   ├── TextEditor/
 │   │   ├── TextEditorCore/
 │   │   └── TextEditorTests/
-│   └── linux/            # C++ implementations
-│       ├── gtk/          # GTK4 for GNOME
+│   └── linux/            # Implementaciones C++
+│       ├── gtk/          # GTK4 para GNOME
 │       │   ├── CMakeLists.txt
 │       │   ├── src/
 │       │   ├── include/
 │       │   └── tests/
-│       └── qt/           # Qt6 for KDE Plasma
+│       └── qt/           # Qt6 para KDE Plasma
 │           ├── CMakeLists.txt
 │           ├── src/
 │           ├── include/
 │           └── tests/
 ├── shared/
-│   ├── localization/     # Translation files
+│   ├── localization/     # Archivos de traducción
 │   │   ├── en.json
 │   │   ├── es.json
 │   │   ├── fr.json
 │   │   └── de.json
-│   ├── themes/           # UI themes
-│   └── icons/            # Application icons
-├── scripts/              # Build and deployment scripts
+│   ├── themes/           # Temas de interfaz
+│   └── icons/            # Iconos de la aplicación
+├── scripts/              # *Scripts* de compilación y despliegue
 │   ├── build-windows.ps1
 │   ├── build-macos.sh
 │   └── build-linux.sh
-└── packages/             # Package configurations
-    ├── windows/          # MSIX, MSI configurations
-    ├── macos/            # DMG, PKG configurations
+└── packages/             # Configuraciones de paquetes
+    ├── windows/          # Configuraciones MSIX, MSI
+    ├── macos/            # Configuraciones DMG, PKG
     └── linux/            # DEB, RPM, AppImage, Flatpak
 ```
 
-## Configuration
+## Configuración
 
-### Settings Location
+### Ubicación de configuraciones
 
 - **Windows**: `%APPDATA%\TextEditor\settings.json`
 - **macOS**: `~/Library/Application Support/TextEditor/settings.json`
 - **Linux**: `~/.config/TextEditor/settings.json`
 
-### Default Settings
+### Configuración predeterminada
+
 ```json
 {
   "theme": "auto",
@@ -231,71 +249,71 @@ TextEditor/
 }
 ```
 
-## Contributing
+## Contribuir
 
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+¡Damos la bienvenida a las contribuciones de la comunidad! Por favor lee nuestras [Guías de contribución](CONTRIBUTING.md) para detalles sobre:
 
-- Code of Conduct
-- Development workflow
-- Pull request process
-- Coding standards for each platform
-- Translation contributions
+- Código de conducta
+- Flujo de trabajo de desarrollo
+- Proceso de *pull request*
+- Estándares de codificación para cada plataforma
+- Contribuciones de traducción
 
-### Development Setup
+### Configuración de desarrollo
 
-1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/TextEditor.git`
-3. Create a feature branch: `git checkout -b feature/amazing-feature`
-4. Make your changes following the platform-specific coding standards
-5. Test your changes thoroughly
-6. Commit with conventional commits: `git commit -m "feat: add amazing feature"`
-7. Push to your branch: `git push origin feature/amazing-feature`
-8. Open a Pull Request
+1. Haz *fork* del repositorio
+2. Clona tu *fork*: `git clone https://github.com/yourusername/TextEditor.git`
+3. Crea una rama de funcionalidad: `git checkout -b feature/funcionalidad-increible`
+4. Haz tus cambios siguiendo los estándares de codificación específicos de la plataforma
+5. Prueba tus cambios completamente
+6. Haz *commit* con commits convencionales: `git commit -m "feat: add amazing feature"`
+7. Sube a tu rama: `git push origin feature/funcionalidad-increible`
+8. Abre un *Pull Request*
 
-## Roadmap
+## Hoja de ruta
 
-### Version 1.1 (Q2 2025)
-- [ ] Plugin system architecture
-- [ ] Advanced search with regex support
-- [ ] Git integration
-- [ ] Distraction-free writing mode
+### Versión 1.1 (Q2 2025)
 
-### Version 1.2 (Q3 2025)
-- [ ] Collaborative editing (real-time)
-- [ ] Cloud synchronization
-- [ ] Advanced theming system
-- [ ] Performance optimizations
+- [ ] Arquitectura de sistema de plugins
+- [ ] Búsqueda avanzada con soporte de regex
+- [ ] Integración con Git
+- [ ] Modo de escritura sin distracciones
 
-### Version 2.0 (Q4 2025)
-- [ ] AI-powered writing assistance
-- [ ] Advanced Markdown extensions
-- [ ] Integrated terminal
-- [ ] Project management features
+### Versión 1.2 (Q3 2025)
 
-## License
+- [ ] Edición colaborativa (tiempo real)
+- [ ] Sincronización en la nube
+- [ ] Sistema avanzado de temas
+- [ ] Optimizaciones de rendimiento
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+### Versión 2.0 (Q4 2025)
 
-## Acknowledgments
+- [ ] Asistencia de escritura con IA
+- [ ] Extensiones avanzadas de Markdown
+- [ ] Terminal integrada
+- [ ] Características de gestión de proyectos
 
-- [CommonMark](https://commonmark.org/) for Markdown specification
-- [Mermaid](https://mermaid-js.github.io/) for diagram rendering
-- [KaTeX](https://katex.org/) for math rendering
-- [Highlight.js](https://highlightjs.org/) for syntax highlighting
-- Our amazing community of contributors and translators
+## Licencia
 
-## Support
+Este proyecto está licenciado bajo la Licencia Pública General de GNU v3.0 - consulta el archivo [LICENSE](LICENSE) para detalles.
 
-- 📖 [Documentation](https://texteditor-docs.example.com)
-- 💬 [Community Discussions](https://github.com/yourusername/TextEditor/discussions)
-- 🐛 [Issue Tracker](https://github.com/yourusername/TextEditor/issues)
-- 📧 [Contact](mailto:support@texteditor.example.com)
+## Reconocimientos
+
+- [CommonMark](https://commonmark.org/) por la especificación de Markdown
+- [Mermaid](https://mermaid-js.github.io/) por el renderizado de diagramas
+- [KaTeX](https://katex.org/) por el renderizado de matemáticas
+- [Highlight.js](https://highlightjs.org/) por el resaltado de sintaxis
+- Nuestra increíble comunidad de contribuidores y traductores
+
+## Soporte
+
+- 📖 [Documentación](https://texteditor-docs.example.com)
+- 💬 [Discusiones de la comunidad](https://github.com/yourusername/TextEditor/discussions)
+- 🐛 [Rastreador de problemas](https://github.com/yourusername/TextEditor/issues)
+- 📧 [Contacto](mailto:support@texteditor.example.com)
 
 ---
 
-**Made with ❤️ by the TextEditor Team**
+**Hecho con ❤️ por el equipo de TextEditor**
 
-*Supporting Windows, macOS, and Linux with native performance and user experience.*
-
-*Ian se la come*
-*Carlos mama verga*
+*Admitiendo Windows, macOS y Linux con rendimiento nativo y experiencia de usuario.*
