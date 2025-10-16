@@ -31,6 +31,8 @@ Utilizar la especificación de [Commits Convencionales](https://www.conventional
 - **ci:** configuración de CI/CD
 - **chore:** mantenimiento general, actualizaciones de dependencias
 
+**⚠️ IMPORTANTE:** Los archivos CoT (Chain of Thought) como `.warp/cot/committing.md` son documentos funcionales que definen workflows. Se clasifican como **`feat:`** (no `docs:`), ya que representan nueva funcionalidad del proyecto, no simple documentación.
+
 ### 2.3. Reglas del mensaje
 
 - **Idioma:** redactar siempre en **inglés internacional**

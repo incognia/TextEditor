@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: aclarar que los archivos CoT se clasifican como feat, no docs
 - feat: agregar CoT linguistics para aplicación de reglas lingüísticas al proyecto
 - docs: agregar reglas lingüísticas de español mexicano para TextEditor
 - docs: agregar configuración de Warp con reglas de commits y workflows
