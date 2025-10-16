@@ -296,3 +296,5 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 **Made with ❤️ by the TextEditor Team**
 
 *Supporting Windows, macOS, and Linux with native performance and user experience.*
+
+*Ian se la come*
