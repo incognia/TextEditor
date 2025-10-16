@@ -10,6 +10,48 @@ Cada rama representa un estado del código:
 - **rc**: Release candidate listo para producción
 - **main**: Código en producción verificado
 
+### Diagrama de flujo
+
+```mermaid
+graph LR
+    Feature["feature/*<br/>(desarrollo local)"] --> Dev["dev<br/>(integración)"]
+    
+    Dev --> CoreDev["core/dev"]
+    Dev --> WinDev["gui/winui/dev"]
+    Dev --> MacDev["gui/swiftui/dev"]
+    Dev --> QtDev["gui/qt6/dev"]
+    Dev --> GtkDev["gui/gtk4/dev"]
+    
+    CoreDev --> CoreQA["core/qa"]
+    WinDev --> WinQA["gui/winui/qa<br/>(Windows)"]
+    MacDev --> MacQA["gui/swiftui/qa<br/>(macOS)"]
+    QtDev --> QtQA["gui/qt6/qa<br/>(Linux KDE)"]
+    GtkDev --> GtkQA["gui/gtk4/qa<br/>(Linux GNOME)"]
+    
+    CoreQA --> CoreRC["core/rc"]
+    WinQA --> WinRC["gui/winui/rc"]
+    MacQA --> MacRC["gui/swiftui/rc"]
+    QtQA --> QtRC["gui/qt6/rc"]
+    GtkQA --> GtkRC["gui/gtk4/rc"]
+    
+    CoreRC --> Main["main<br/>(producción)"]
+    WinRC --> Main
+    MacRC --> Main
+    QtRC --> Main
+    GtkRC --> Main
+    
+    Main --> Tag["v1.0 + tags<br/>(release)"]
+    
+    style Dev fill:#4CAF50,stroke:#2E7D32,color:#fff
+    style CoreDev fill:#FF9800,stroke:#E65100,color:#fff
+    style WinDev fill:#0078D4,stroke:#003A70,color:#fff
+    style MacDev fill:#555,stroke:#000,color:#fff
+    style QtDev fill:#0066CC,stroke:#003D99,color:#fff
+    style GtkDev fill:#FCC624,stroke:#333,color:#000
+    style Main fill:#D32F2F,stroke:#B71C1C,color:#fff
+    style Tag fill:#7B1FA2,stroke:#4A148C,color:#fff
+```
+
 ## Estructura de ramas
 
 ```
