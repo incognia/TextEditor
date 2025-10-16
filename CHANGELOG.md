@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: aplicar reglas LINGUISTICS.md a WARP.md y .warp/README.md (capitalización de títulos y siglas invariables)
 - docs: reescribir README.md en español mexicano según reglas LINGUISTICS.md
 - docs: aclarar que los archivos CoT se clasifican como feat, no docs
 - feat: agregar CoT linguistics para aplicación de reglas lingüísticas al proyecto

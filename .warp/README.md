@@ -25,9 +25,9 @@ Contiene las reglas de desarrollo específicas del proyecto:
   - Comandos git no interactivos recomendados
 
 ### `cot/`
-Workflows automatizados (Chain of Thought) que implementan las reglas:
+Workflows automatizados (*Chain of Thought*) que implementan las reglas:
 
-- **`committing.md`** - Flujo paso a paso para realizar commits
+- **`committing.md`** - Flujo paso a paso para realizar *commits*
   - Paso 0: Validación de configuración SSH e identidad
   - Paso 1: Análisis de cambios pendientes
   - Paso 2: Cálculo de fecha CST
@@ -36,7 +36,7 @@ Workflows automatizados (Chain of Thought) que implementan las reglas:
   - Paso 5: Push
   - Paso 6: Verificación
 
-## Cómo Usar
+## Cómo usar
 
 ### Aplicar un Workflow (CoT)
 
@@ -83,7 +83,7 @@ TextEditor/
         └── committing.md    # Workflow de commits
 ```
 
-## Notas Importantes
+## Notas importantes
 
 1. **Siempre actualizar CHANGELOG.md antes de hacer commit** - Es una regla crítica
 2. **Usar CST (UTC-6)** - No UTC. Calcular con `TZ=America/Mexico_City date`
@@ -92,7 +92,7 @@ TextEditor/
 5. **Atomicidad** - Cada commit debe representar un cambio único
 6. **Usar SSH ed25519** - No HTTPS ni RSA. La configuración debe usar SSH con clave ed25519 (~/.ssh/id_ed25519)
 
-## Referencias Rápidas
+## Referencias rápidas
 
 - [Commits Convencionales](https://www.conventionalcommits.org/en/v1.0.0/)
 - Zona horaria: CST = UTC - 6 horas

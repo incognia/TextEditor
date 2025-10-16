@@ -32,18 +32,18 @@ Define las reglas de commits para TextEditor con énfasis en:
 
 **Ubicación**: `.warp/rules/COMMITTING.md`
 
-## Workflows Automatizados (CoTs)
+## Workflows automatizados (CoT)
 
 ### `.warp/cot/committing.md`
 
-Workflow paso a paso para realizar commits siguiendo las reglas locales:
+Workflow paso a paso para realizar *commits* siguiendo las reglas locales:
 
 1. **Validación** de identidad SSH y configuración Git
 2. **Análisis** de cambios con `git status`
 3. **Cálculo** de fecha CST para CHANGELOG
 4. **Actualización** de CHANGELOG.md
-5. **Commits atómicos** con mensajes convencionales
-6. **Push** simple y verificación
+5. ***Commits* atómicos** con mensajes convencionales
+6. **Envío** simple y verificación
 
 **Ubicación**: `.warp/cot/committing.md`
 
@@ -61,7 +61,7 @@ git config core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes"
 
 **Nota importante:** Se utiliza ed25519 en lugar de RSA para mayor seguridad. La clave está en `~/.ssh/id_ed25519`.
 
-## Tipos de Commits Esperados en TextEditor
+## Tipos de commits esperados en TextEditor
 
 ### Frecuentes
 
@@ -77,7 +77,7 @@ git config core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes"
 - **test:** adición de pruebas
 - **perf:** mejoras de rendimiento
 
-## Ejemplos de Commits
+## Ejemplos de commits
 
 ### Bien formados
 
@@ -108,7 +108,7 @@ updated code
 feat
 ```
 
-## Procedimiento de Commit
+## Procedimiento de commit
 
 1. **Hacer cambios** en el código
 2. **Ejecutar CoT**: `aplica .warp/cot/committing.md`
@@ -116,11 +116,11 @@ feat
    - Valida la configuración SSH
    - Analiza los cambios
    - Actualiza CHANGELOG.md automáticamente
-   - Realiza commits atómicos
-   - Ejecuta push
+   - Realiza *commits* atómicos
+   - Envía cambios
    - Verifica con git log
 
-## Referencia Rápida
+## Referencia rápida
 
 ```bash
 # Ver configuración actual (incluyendo SSH con ed25519)
