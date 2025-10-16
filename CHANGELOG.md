@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: corregir hoja de ruta en README.md (ajustar versiones a timeline Q4 2025)
 - docs: añadir diagrama de arquitectura Mermaid en README.md
 - docs: actualizar README.md con arquitectura híbrida (core C++ compartido + GUI nativa)
 - docs: añadir badges de licencia, lenguajes y plataformas al README.md

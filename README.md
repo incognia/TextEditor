@@ -356,21 +356,21 @@ TextEditor/
 
 ## Hoja de ruta
 
-### Versión 1.1 (Q2 2025)
+### Versión 1.0 (Q4 2025)
 
 - [ ] Arquitectura de sistema de plugins
 - [ ] Búsqueda avanzada con soporte de regex
 - [ ] Integración con Git
 - [ ] Modo de escritura sin distracciones
 
-### Versión 1.2 (Q3 2025)
+### Versión 1.1 (Q1 2026)
 
 - [ ] Edición colaborativa (tiempo real)
 - [ ] Sincronización en la nube
 - [ ] Sistema avanzado de temas
 - [ ] Optimizaciones de rendimiento
 
-### Versión 2.0 (Q4 2025)
+### Versión 1.2 (Q2 2026)
 
 - [ ] Asistencia de escritura con IA
 - [ ] Extensiones avanzadas de Markdown
