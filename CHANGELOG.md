@@ -1,21 +1,17 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-The format is based on dates in CST (Mexico City timezone, UTC-6).
-
 ## [2025-10-16]
 
-- docs: add Warp configuration with committing rules and workflows
-- docs: update README.md with additional content
-- test: add ianpa.test and caz.test files
-- config: configure Git with ed25519 SSH key
+- docs: agregar configuración de Warp con reglas de commits y workflows
+- docs: actualizar README.md con contenido adicional
+- test: agregar archivos ianpa.test y caz.test
+- config: configurar Git con clave SSH ed25519
 
 ## [2025-10-15]
 
-- docs: create Warp project configuration (.warp/rules/COMMITTING.md and .warp/cot/committing.md)
-- docs: create WARP.md root documentation
+- docs: crear configuración de proyecto Warp (.warp/rules/COMMITTING.md y .warp/cot/committing.md)
+- docs: crear documentación WARP.md en raíz
 
 ## [2025-10-14]
 
-- test: add incognia.test file
+- test: agregar archivo de prueba incognia.test
