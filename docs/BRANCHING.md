@@ -52,6 +52,70 @@ graph LR
     style Tag fill:#7B1FA2,stroke:#4A148C,color:#fff
 ```
 
+### Ejemplo de flujo Git (release v1.0)
+
+```mermaid
+gitGraph
+    commit id: "Initial"
+    branch develop
+    checkout develop
+    commit id: "Setup base"
+    
+    branch core/dev
+    checkout core/dev
+    commit id: "Add buffer"
+    commit id: "Add parser"
+    
+    branch gui/winui/dev
+    checkout gui/winui/dev
+    commit id: "WinUI setup"
+    commit id: "Main window"
+    
+    branch gui/swiftui/dev
+    checkout gui/swiftui/dev
+    commit id: "SwiftUI setup"
+    commit id: "ContentView"
+    
+    checkout develop
+    merge core/dev
+    merge gui/winui/dev
+    merge gui/swiftui/dev
+    commit id: "Prepare v1.0"
+    
+    branch core/qa
+    checkout core/qa
+    commit id: "QA: core tests"
+    
+    branch gui/winui/qa
+    checkout gui/winui/qa
+    commit id: "QA: Windows tests"
+    
+    branch gui/swiftui/qa
+    checkout gui/swiftui/qa
+    commit id: "QA: macOS tests"
+    
+    branch core/rc
+    checkout core/rc
+    merge core/qa
+    commit id: "RC: core ready"
+    
+    branch gui/winui/rc
+    checkout gui/winui/rc
+    merge gui/winui/qa
+    commit id: "RC: WinUI ready"
+    
+    branch gui/swiftui/rc
+    checkout gui/swiftui/rc
+    merge gui/swiftui/qa
+    commit id: "RC: SwiftUI ready"
+    
+    checkout main
+    merge core/rc
+    merge gui/winui/rc
+    merge gui/swiftui/rc
+    commit id: "Release v1.0" tag: "v1.0"
+```
+
 ## Estructura de ramas
 
 ```

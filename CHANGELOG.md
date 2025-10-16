@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: agregar ejemplo gitGraph en BRANCHING.md
 - docs: agregar diagrama mermaid a estrategia de ramas en BRANCHING.md
 - docs: agregar estrategia de ramas (dev/qa/rc/main) con subramas por plataforma
 - docs: corregir hoja de ruta en README.md (ajustar versiones a timeline Q4 2025)
