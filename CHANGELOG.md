@@ -2,7 +2,7 @@
 
 ## [2025-10-15]
 
-- docs: agregar estrategia de descarga selectiva por plataforma en BRANCHING.md (*sparse-checkout*)
+- docs: aclarar que descarga selectiva (*sparse-checkout*) aplica a dev, qa y rc (no bajar código que no compila)
 - docs: segunda pasada de reglas lingüísticas en BRANCHING.md (siglas invariables, minúsculas tras dos puntos, cursivas en términos técnicos)
 - docs: agregar ejemplo gitGraph en BRANCHING.md
 - docs: agregar diagrama mermaid a estrategia de ramas en BRANCHING.md

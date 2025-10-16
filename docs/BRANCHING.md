@@ -368,7 +368,12 @@ Esto garantiza que cada *GUI* se prueba en su entorno nativo.
 
 ## Descarga selectiva por plataforma
 
-En entornos de *QA*, **no clonar el repositorio completo**. Descargar solo el *core* + la *GUI* nativa:
+En ramas **dev**, **qa** y **rc**, **no clonar el repositorio completo**. Descargar solo el *core* + la *GUI* nativa correspondiente a tu plataforma de desarrollo/prueba. No tiene caso bajar código que no compilará:
+
+**Aplicable a**:
+- `core/dev`, `gui/*/dev` - Desarrollo local
+- `core/qa`, `gui/*/qa` - Pruebas en *QA*
+- `core/rc`, `gui/*/rc` - *Release candidate* en *QA*
 
 ### macOS (SwiftUI)
 
@@ -419,9 +424,11 @@ git checkout gui/gtk4/qa
 ### Ventajas
 
 - ✅ Descarga ~70% menos código innecesario
-- ✅ *Build* y pruebas más rápidas
-- ✅ Menos espacio en disco en máquinas de *QA*
+- ✅ *Build* más rápido (menos I/O de disco)
+- ✅ Pruebas más rápidas
+- ✅ Menos espacio en disco en máquinas de desarrollo y *QA*
 - ✅ Compilación nativa solo del *core* + *GUI* correspondiente
+- ✅ Evita errores de compilación en código de otras plataformas
 
 ## Sincronización de core
 
