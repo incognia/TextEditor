@@ -2,6 +2,8 @@
 
 ## [2025-10-15]
 
+- feat: agregar CoT linguistics para aplicación de reglas lingüísticas al proyecto
+- docs: agregar reglas lingüísticas de español mexicano para TextEditor
 - docs: agregar configuración de Warp con reglas de commits y workflows
 - docs: consolidar y limpiar entradas del CHANGELOG
 - docs: crear estructura .warp con reglas COMMITTING.md y CoT committing.md
