@@ -2,6 +2,7 @@
 
 ## [2025-10-15]
 
+- docs: agregar estrategia híbrida de CI/CD con GitHub Actions y Argo CD (fases de desarrollo local, CI básico y CI completo)
 - docs: actualizar BRANCHING.md con nomenclatura develop/testing/release y subramas dev/qa/rc
 - docs: corregir errores de markdown lint en BRANCHING.md
 - docs: aclarar que descarga selectiva (*sparse-checkout*) aplica a dev, qa y rc (no bajar código que no compila)
