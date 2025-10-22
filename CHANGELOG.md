@@ -2,6 +2,7 @@
 
 ## [2025-10-21]
 
+- test: agregar archivo de prueba ianpacommit.txt para demostración de flujo CoT committing
 - test: agregar archivo de prueba para demostración de *CoT* de lingüística
 
 ## [2025-10-16]
