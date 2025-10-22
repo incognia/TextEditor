@@ -1,5 +1,9 @@
 # Changelog
 
+## [2025-10-21]
+
+- test: agregar archivo de prueba para demostración de *CoT* de lingüística
+
 ## [2025-10-16]
 
 - config: agregar .gitignore completo para arquitectura multiplataforma (C++, C#, Swift, Qt6, GTK4)

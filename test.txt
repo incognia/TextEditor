@@ -1,0 +1,1 @@
+Archivo de prueba para demostrar el uso de los *CoT*
