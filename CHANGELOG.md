@@ -8,6 +8,7 @@
 - config: agregar CMakeLists.txt para futura integración con sistema de construcción multiplataforma
 - config: actualizar .gitignore para permitir Makefiles del proyecto (excluir solo archivos generados)
 - docs: agregar README.md en core/ con instrucciones de compilación y uso
+- docs: agregar TODO.md en core/ con roadmap para convertir el módulo en biblioteca compartida
 
 ## [2025-10-21]
 
