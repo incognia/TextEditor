@@ -1,5 +1,13 @@
 # Changelog
 
+## [2025-10-24]
+
+- feat(file): implementar FileManager con operaciones CRUD básicas (crear, leer, actualizar, eliminar archivos de texto)
+- feat(file): agregar programa principal interactivo con menú para probar operaciones CRUD
+- config: agregar Makefile para compilación del core sin dependencias de CMake
+- config: agregar CMakeLists.txt para futura integración con sistema de construcción multiplataforma
+- docs: agregar README.md en core/ con instrucciones de compilación y uso
+
 ## [2025-10-21]
 
 - test: agregar archivo de prueba para demostración de *CoT* de lingüística
