@@ -6,6 +6,7 @@
 - feat(file): agregar programa principal interactivo con menú para probar operaciones CRUD
 - config: agregar Makefile para compilación del core sin dependencias de CMake
 - config: agregar CMakeLists.txt para futura integración con sistema de construcción multiplataforma
+- config: actualizar .gitignore para permitir Makefiles del proyecto (excluir solo archivos generados)
 - docs: agregar README.md en core/ con instrucciones de compilación y uso
 
 ## [2025-10-21]
